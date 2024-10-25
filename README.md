@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# National Louis University Coding Challenge
+
+This is Matt Keane's submission as part of his employment application to National Louis University.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
