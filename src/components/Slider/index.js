@@ -6,15 +6,15 @@ import slider_3 from '../../assets/images/slider_3.jpg';
 
 export default function Slider() {
     return (
-        <Carousel interval={ null } wrap={ false }>
+        <Carousel interval={ null } wrap={ false } >
             <Carousel.Item>
-                <Image src={ slider_1 } fluid />
+                <Image src={ slider_1 } className="slider-image" />
             </Carousel.Item>
             <Carousel.Item>
-                <Image src={ slider_2 } fluid />
+                <Image src={ slider_2 } className="slider-image" />
             </Carousel.Item>
             <Carousel.Item>
-                <Image src={ slider_3 } fluid />
+                <Image src={ slider_3 } className="slider-image" />
             </Carousel.Item>
         </Carousel>
     );
