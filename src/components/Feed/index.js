@@ -1,19 +1,27 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import Card from 'react-bootstrap/Card';
 
 import { getPosts } from '../../services/postsService';
 
 export default function Feed() {
+    const [posts, setPosts] = useState([]);
+
     useEffect(() => {
         getPosts()
-            .then(console.log);
-    });
+            .then(setPosts);
+    }, []);
+
+    const postList = posts.map((post) => (
+        <Card key={ post.id }>
+            <Card.Title>{ post.title }</Card.Title>
+            <Card.Body>{ post.body }</Card.Body>
+        </Card>
+    ));
 
     return (
-        <Card>
-            <Card.Title>Post Title</Card.Title>
-            <Card.Body>Post body</Card.Body>
-        </Card>
+        <>
+            { postList }
+        </>
     );
 }
