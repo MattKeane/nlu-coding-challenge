@@ -1,7 +1,8 @@
-const BASE_URL = "https://jsonplaceholder.typicode.com/";
+const BASE_URL = 'https://jsonplaceholder.typicode.com/';
 
 export function getPosts() {
-    const url = BASE_URL + "/posts";
+    const url = BASE_URL + '/posts';
+
     return fetch(url)
         .then((res) => {
             if (res.status === 200) {

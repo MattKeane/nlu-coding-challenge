@@ -9,7 +9,8 @@ export default function Feed() {
 
     useEffect(() => {
         getPosts()
-            .then(setPosts);
+            .then(setPosts)
+            .catch(console.log);
     }, []);
 
     const postList = posts.map((post) => (
