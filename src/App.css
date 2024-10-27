@@ -12,3 +12,11 @@
   aspect-ratio: 2;
   object-fit: cover;
 }
+
+.footer-logo {
+  max-width: 150px;
+}
+
+.footer-logo-container {
+  text-align: right;
+}

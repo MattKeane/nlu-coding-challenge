@@ -10,6 +10,7 @@ import HeaderNav from './components/HeaderNav';
 import Slider from './components/Slider';
 import Feed from './components/Feed';
 import QuoteForm from './components/QuoteForm';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <QuoteForm />
         </Col>
       </Row>
+      <Footer />
     </div>
   );
 }

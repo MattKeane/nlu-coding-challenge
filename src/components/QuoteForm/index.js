@@ -33,8 +33,10 @@ export default function QuoteForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         createPost(formState)
-            .then(console.log)
+            .then(console.log);
+            
         setFormState(defaultFormState);
     };
 
