@@ -4,14 +4,18 @@ import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Button from 'react-bootstrap/Button';
 
+import { createPost } from '../../services/postsService';
+
 export default function QuoteForm() {
-    const [formState, setFormState] = useState({
+    const defaultFormState = {
         name: '',
         email: '',
         capability: '',
         comments: '',
         newsletter: false,
-    });
+    }
+
+    const [formState, setFormState] = useState(defaultFormState);
 
     const handleChange = (e) => {
         if (e.target.name === 'newsletter') {
@@ -25,16 +29,13 @@ export default function QuoteForm() {
                 [e.target.name]: e.target.value,
             }));
         }
-        // console.log(e);
-        // setFormState((cur) => ({
-        //     ...cur,
-        //     [e.target.name]: e.target.checked || e.target.value,
-        // }))
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formState);
+        createPost(formState)
+            .then(console.log)
+        setFormState(defaultFormState);
     };
 
     return (
