@@ -1,6 +1,11 @@
+// Slider Component
+// Displays a carousel of images
+// Images and links can be updated by editing the sliderItems array
+
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'react-bootstrap/Image';
 
+// Image imports
 import slider_1 from '../../assets/images/slider_1.jpg';
 import slider_2 from '../../assets/images/slider_2.jpg';
 import slider_3 from '../../assets/images/slider_3.jpg';

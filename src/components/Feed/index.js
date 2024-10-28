@@ -1,3 +1,8 @@
+// Feed Component
+
+// Displays a number of posts equal to its 'posts' prop
+// Defaults to show all
+
 import { useState, useEffect } from 'react';
 
 import Card from 'react-bootstrap/Card';
@@ -18,7 +23,7 @@ export default function Feed(props) {
         ? 
         props.posts : posts.length;
 
-    const postList = posts
+    const postCards = posts
         .slice(0, postsToShow)
         .map((post) => (
             <Card key={ post.id }>
@@ -31,7 +36,7 @@ export default function Feed(props) {
 
     return (
         <>
-            { postList }
+            { postCards }
         </>
     );
 }

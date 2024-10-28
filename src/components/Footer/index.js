@@ -1,3 +1,8 @@
+// Footer Component
+// Displays footer with dynamic copyright date
+
+// TODO: Consider moving out of React and directly into the document.
+
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';

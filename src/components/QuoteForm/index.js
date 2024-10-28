@@ -1,3 +1,8 @@
+// QuoteForm Component
+
+// Displays a form
+// Submits a POST request to the API
+
 import { useState } from 'react';
 
 import Form from 'react-bootstrap/Form';
@@ -14,7 +19,7 @@ export default function QuoteForm() {
         capability: '',
         comments: '',
         newsletter: false,
-    }
+    };
 
     const [formState, setFormState] = useState(defaultFormState);
 

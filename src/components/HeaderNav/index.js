@@ -1,3 +1,8 @@
+// HeaderNav Component
+// Displays HeaderNav menu
+
+// TODO: Consider moving out of React and directly into the document.
+
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
