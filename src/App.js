@@ -1,9 +1,9 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-import './App.css';
-
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
+
+// style sheets
+import './App.scss';
 
 // component imports
 import HeaderNav from './components/HeaderNav';
@@ -12,14 +12,19 @@ import Feed from './components/Feed';
 import QuoteForm from './components/QuoteForm';
 import Footer from './components/Footer';
 
+import logo from './assets/images/logo.png';
+
 function App() {
   return (
     <div className="App">
-      <HeaderNav />
+      <header>
+        <Image src={ logo } className="header-logo" />
+        <HeaderNav />
+      </header>
       <Slider />
       <Row>
         <Col xs={ 12 } md={ 8 }>
-          <Feed />
+          <Feed posts={ 2 } />
         </Col>
         <Col>
           <QuoteForm />

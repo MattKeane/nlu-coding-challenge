@@ -1,0 +1,117 @@
+$dark: #005A96;
+$primary: #0072CE;
+$secondary: #009ADA;
+$tertiary: #87D4ED;
+$light: #F5F5F5;
+$nlumediumgray: #A2AAAD;
+$nlulightgray: #DDE0E3;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+.App {
+  font-family: 'Barlow', san-serif;
+  background-color: $light;
+}
+
+form {
+  background-color: $dark;
+  color: $light;
+  padding: 12px;
+}
+
+.form-control {
+  border-radius: 0;
+  background-color: $light;
+  margin: 12px 0;
+}
+
+.form-select {
+  border-radius: 0;
+  background-color: $light;
+  margin: 12px 0;
+}
+
+.form-check-input[type=checkbox] {
+  border-radius: 0;
+}
+
+label {
+  color: black;
+}
+
+.form-check-label {
+  color: $nlulightgray;
+}
+
+.form-check {
+  margin: 6px 0;
+}
+
+h3 {
+  font-family: 'Barlow Condensed', san-serif;
+  text-align: center;
+}
+
+.btn {
+  border-radius: 0;
+  margin: 0 auto;
+  color: $light;
+}
+
+.card {
+  border: 0;
+  background-color: $light;
+}
+
+.card-title {
+  font-family: 'Barlow Condensed', san-serif;
+  color: $dark;
+}
+
+.nav-link:hover {
+  color: $primary;
+}
+
+.navbar-nav {
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.navbar-toggler {
+  border-radius: 0;
+}
+
+.dropdown-menu {
+  border-radius: 0;
+}
+
+.header-logo {
+  width: 100%;
+  max-width: 300px;
+  margin: 24px;
+}
+
+.slider-image {
+  width: 100%;
+  aspect-ratio: 2;
+  object-fit: cover;
+}
+
+.footer-logo {
+  max-width: 150px;
+}
+
+.footer-logo-container {
+  text-align: right;
+}
+
+footer {
+  padding: 12px;
+  align-items: center;
+}
+
+.copyright {
+  color: $dark;
+}

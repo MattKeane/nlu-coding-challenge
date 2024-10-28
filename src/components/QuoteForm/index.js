@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
 
 import { createPost } from '../../services/postsService';
 
@@ -42,57 +43,59 @@ export default function QuoteForm() {
 
     return (
         <Form onSubmit={ handleSubmit }>
-            <h3>Get a quote</h3>
-            <FloatingLabel controlId="quoteFormName" label="Name">
-                <Form.Control 
-                    type="text" 
-                    placeholder="Name"
-                    name="name"
-                    value={ formState.name }
-                    onChange={ handleChange } 
-                />
-            </FloatingLabel>
-            <FloatingLabel controlId="quoteFormEmail" label="Email">
-                <Form.Control 
-                    type="email" 
-                    placeholder="Email"
-                    name="email"
-                    value={ formState.email }
-                    onChange={ handleChange } 
-                />
-            </FloatingLabel>
-            <Form.Select 
-                aria-label="Select a capability"
-                name="capability"
-                value={ formState.capability }
-                onChange={ handleChange }
-            >
-                <option>Select a capability</option>
-                <option value="design">Design</option>
-                <option value="production">Production</option>
-                <option value="certification">Certification</option>
-            </Form.Select>
-            <FloatingLabel controlId="quoteFormComments" label="Comments">
-                <Form.Control 
-                    as="textarea" 
-                    rows={ 3 }
-                    name="comments"
-                    value={ formState.comments }
-                    onChange={ handleChange } 
-                />
-            </FloatingLabel>
-            <Form.Group controlId="quoteFormNewsletter">
-                <Form.Check 
-                    type="checkbox" 
-                    label="I'd like to receive the newsletter"
-                    name="newsletter"
+            <Container>
+                <h3>Get a quote</h3>
+                <FloatingLabel controlId="quoteFormName" label="Name">
+                    <Form.Control 
+                        type="text" 
+                        placeholder="Name"
+                        name="name"
+                        value={ formState.name }
+                        onChange={ handleChange } 
+                    />
+                </FloatingLabel>
+                <FloatingLabel controlId="quoteFormEmail" label="Email">
+                    <Form.Control 
+                        type="email" 
+                        placeholder="Email"
+                        name="email"
+                        value={ formState.email }
+                        onChange={ handleChange } 
+                    />
+                </FloatingLabel>
+                <Form.Select 
+                    aria-label="Select a capability"
+                    name="capability"
+                    value={ formState.capability }
                     onChange={ handleChange }
-                    checked={ formState.checked }
-                />
-            </Form.Group>
-            <Button type="submit">
-                Get a quote
-            </Button>
+                >
+                    <option>Select a capability</option>
+                    <option value="design">Design</option>
+                    <option value="production">Production</option>
+                    <option value="certification">Certification</option>
+                </Form.Select>
+                <FloatingLabel controlId="quoteFormComments" label="Comments">
+                    <Form.Control 
+                        as="textarea" 
+                        rows={ 3 }
+                        name="comments"
+                        value={ formState.comments }
+                        onChange={ handleChange } 
+                    />
+                </FloatingLabel>
+                <Form.Group controlId="quoteFormNewsletter">
+                    <Form.Check 
+                        type="checkbox" 
+                        label="I'd like to receive the newsletter"
+                        name="newsletter"
+                        onChange={ handleChange }
+                        checked={ formState.checked }
+                    />
+                </Form.Group>
+                <Button type="submit" variant="secondary">
+                    Get a quote
+                </Button>
+            </Container>
         </Form>
     );
 }
