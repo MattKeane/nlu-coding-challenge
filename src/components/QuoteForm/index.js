@@ -3,6 +3,8 @@
 // Displays a form
 // Submits a POST request to the API
 
+// TODO: Add Validation
+
 import { useState } from 'react';
 
 import Form from 'react-bootstrap/Form';
@@ -10,7 +12,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 
-import { createPost } from '../../services/postsService';
+import { createQuote } from '../../services/mockDB';
 
 export default function QuoteForm() {
     const defaultFormState = {
@@ -39,10 +41,8 @@ export default function QuoteForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        createPost(formState)
+        createQuote(formState)
             .then(console.log);
-            
         setFormState(defaultFormState);
     };
 
