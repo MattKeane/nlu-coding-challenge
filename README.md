@@ -4,6 +4,12 @@ This is Matt Keane's submission as part of his employment application to Nationa
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Installation
+
+To install dependencies run:
+
+### `npm install`
+
 ## Available Scripts
 
 In the project directory, you can run:
